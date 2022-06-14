@@ -11,13 +11,11 @@ app.get("/", async function(req, res) {
     
     await page.goto('https://www.cineplanet.com.pe/cinemas/cp-alcazar')
 
-    const element = await page.waitForSelector('.cinemas-details--header');
-
-    await page.screenshot({ path: 'xbox.png' })
+    const element = await page.waitForSelector('.cinemas-details--header')
 
     await browser.close()
     
-    res.send("Bienvenido a la api de crawlers");
+    res.send("Bienvenido a la api de crawlers")
 });
 
 const PORT = process.env.PORT || 3000
