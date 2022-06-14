@@ -1,19 +1,19 @@
 const express = require('express');
-const { chromium } = require('playwright');
+// const { chromium } = require('playwright');
 
 const app = express();
 
 app.get("/", async function(req, res) {
 
-    const browser = await chromium.launch();
+    // const browser = await chromium.launch();
 
-    const page = await browser.newPage();
+    // const page = await browser.newPage();
     
-    await page.goto('https://www.cineplanet.com.pe/cinemas/cp-alcazar');
+    // await page.goto('https://www.cineplanet.com.pe/cinemas/cp-alcazar');
 
-    const element = await page.waitForSelector('.cinemas-details--header');
+    // const element = await page.waitForSelector('.cinemas-details--header');
 
-    await browser.close();
+    // await browser.close();
     
     res.send("Bienvenido a la api de crawlers");
 });
